@@ -19,12 +19,14 @@ public class RegisterController {
     @Autowired
     private UserRepository userRepository;
 
+    // Singup formuna yönlendirilir.
     @GetMapping("/sign-up")
     public String signUp(Model model){
         model.addAttribute("key_form",new UserEntityDto());
         return "signup_form";
     }
 
+    // Validasyon kurallarından geçer ise veritabanına kayıt işlemi gerçekleşir.
     @PostMapping("/sign-up")
     public String signUp(@Valid @ModelAttribute("key_form") UserEntityDto dto, BindingResult bindingResult){
         if(bindingResult.hasErrors()){

@@ -12,11 +12,13 @@ public class HomePageController {
     @Autowired
     private UserRepository userRepository;
 
+    // Anasayfaya yönlendirilir.
     @GetMapping("/")
     public String viewHomePage(){
         return "index";
     }
 
+    // Kayıt olan bütün kullanıcılar listelenir.
     @GetMapping("/all-users")
     public String viewAllUsers(Model model){
         model.addAttribute("key_users", this.userRepository.findAll());

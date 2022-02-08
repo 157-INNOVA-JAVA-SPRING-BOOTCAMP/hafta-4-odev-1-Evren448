@@ -32,7 +32,6 @@ public class UserEntity implements Serializable {
     @Column(name = "email", unique = true, nullable = false)
     private String email;
 
-
     @Column(name = "created_date")
     @Temporal(TemporalType.TIMESTAMP)
     @CreationTimestamp

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Registration</title>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600' rel='stylesheet'
+          type='text/css'>
+    <link href="//netdna.bootstrapcdn.com/font-awesome/3.1.1/css/font-awesome.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" th:href="@{/css/style.css}">
+</head>
+<body>
+<div class="testbox">
+    <h1>Registration</h1>
+
+    <form th:action="@{/sign-up}" th:object="${key_form}" method="post">
+        <div>
+            <label id="icon"><i class="icon-envelope "></i></label>
+            <input type="text" name="name" th:field="*{email}" placeholder="Email"/>
+            <div th:if="${#fields.hasErrors('email')}" th:errors="*{email}" style="color: red">sa</div>
+        </div>
+        <div>
+            <label id="icon"><i class="icon-user"></i></label>
+            <input type="text" name="name" th:field="*{name}" placeholder="Name"/>
+            <div th:if="${#fields.hasErrors('name')}" th:errors="*{name}" style="color: red"></div>
+        </div>
+        <div>
+            <label id="icon"><i class="icon-shield"></i></label>
+            <input type="text" name="name" th:field="*{surname}" placeholder="Surname"/>
+            <div th:if="${#fields.hasErrors('surname')}" th:errors="*{surname}" style="color: red"></div>
+        </div>
+        <button th:href="@{/all-users}" type="submit" class="btn btn-primary btn-block mt-3">Register</button>
+        <p>Back to <a th:href="@{/}">Homepage</a>.</p>
+    </form>
+</div>
+</body>
+</html>
+
+

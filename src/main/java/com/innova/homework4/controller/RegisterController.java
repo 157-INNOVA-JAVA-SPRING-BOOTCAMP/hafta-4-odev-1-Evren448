@@ -23,14 +23,15 @@ public class RegisterController {
     @GetMapping("/sign-up")
     public String signUp(Model model){
         model.addAttribute("key_form",new UserEntityDto());
-        return "signup_form";
+        return "register_form";
     }
 
     // Validasyon kurallarından geçer ise veritabanına kayıt işlemi gerçekleşir.
     @PostMapping("/sign-up")
     public String signUp(@Valid @ModelAttribute("key_form") UserEntityDto dto, BindingResult bindingResult){
         if(bindingResult.hasErrors()){
-            return "signup_form";
+            System.out.println("sa");
+            return "register_form";
         }
 
         UserEntity user = UserEntity.builder()
@@ -41,6 +42,6 @@ public class RegisterController {
                 .build();
 
         this.userRepository.save(user);
-        return "redirect:/all-users";
+        return "redirect:/";
     }
 }

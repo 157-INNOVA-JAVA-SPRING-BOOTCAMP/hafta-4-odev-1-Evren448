@@ -5,11 +5,15 @@ eklenecek
 
 * Homepage
 
-![HomepageCapture](https://user-images.githubusercontent.com/72839778/152664109-07434768-f007-4a1c-aa3b-517d5133bf10.JPG)
+![HomepageCapture](https://user-images.githubusercontent.com/72839778/153095162-c4c786bb-c039-489f-83ae-6373946b93af.JPG)
 
 * Register Page
 
-![RegisCapture](https://user-images.githubusercontent.com/72839778/152664120-279dbced-2e6c-4e1b-bc79-7476bd84dacf.JPG)
+![RegisCapture](https://user-images.githubusercontent.com/72839778/153095170-147594e4-39bc-474c-a3db-83697fce6e9f.JPG)
+
+* Rest
+
+![RestCapture](https://user-images.githubusercontent.com/72839778/153095301-758e136b-ad61-4c38-9133-b2fec24c35ab.JPG)
 
 * Validation
 
